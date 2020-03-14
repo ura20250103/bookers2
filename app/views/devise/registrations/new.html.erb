@@ -29,6 +29,17 @@
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+<body>
+    <% if flash[:notice] %>
+      <div class="alert alert-info">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+        <div class="alert alert-danger">
+      <%= flash[:alert] %>
+      </div>
+    <% end %>
+  <%= render "devise/shared/links" %>
+</body>
 <% end %>
-
-<%= render "devise/shared/links" %>
